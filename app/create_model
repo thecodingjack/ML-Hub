@@ -1,0 +1,12 @@
+#!/bin/bash
+
+while getopts i:n:t: option
+  do
+  case "${option}" in
+    i) ID=${OPTARG};;
+    n) NAME=${OPTARG};;
+    t) TYPE=${OPTARG};;
+  esac
+done
+
+curl  -H "Content-Type: application/json" --request POST 'localhost:4000/experiment' --data '{"id":"'"$ID"'","name":"'"$NAME"'","type":"'"$TYPE"'"}'

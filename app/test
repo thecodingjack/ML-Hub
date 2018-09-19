@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while getopts i: option
+  do
+  case "${option}" in
+    i) ID=${OPTARG};;
+  esac
+done
+
+curl  --request GET 'localhost:4000/test?id='$ID'' 

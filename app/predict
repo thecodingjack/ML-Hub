@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while getopts i:s: option
+  do
+  case "${option}" in
+    i) ID=${OPTARG};;
+    s) SAMPLE=${OPTARG};;
+  esac
+done
+echo $SAMPLE
+curl  -H "Content-Type: application/json" --request POST 'localhost:4000/predict' --data '{"id":"'"$ID"'","sample": "'"$SAMPLE"'"}'
