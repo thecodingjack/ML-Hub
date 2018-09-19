@@ -6,7 +6,6 @@ Get docker https://docs.docker.com/install/
 ```sh
 
 git clone https://github.com/thecodingjack/ML-Hub.git
-Get docker herehttps://docs.docker.com/install/
 docker-compose up --build
 
 ```
