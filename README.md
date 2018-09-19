@@ -2,7 +2,7 @@
 
     
 ## Setup
-Get docker here https://docs.docker.com/install/
+Get docker https://docs.docker.com/install/
 ```sh
 
 git clone https://github.com/thecodingjack/ML-Hub.git
